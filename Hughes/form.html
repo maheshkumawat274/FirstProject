@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>form page</title>
+    </head>
+    <body>
+        <form action="#" onsubmit="return validation()" name="myfoerm">
+                *Name:<br>
+                <input  type="text" name="ntxt" id="ntxt" class="form-control" autocomplete="off"><br><br>
+                <b><span id="name" class="text-danger"></span></b>
+                *Work Email ID:<br>
+                <input  type="text" id="wtxt" name="wtxt" autocomplete="off"><br><br>
+                *Phone:<br>
+                <input  type="text" id="ptxt" name="ptxt" ><br><br>
+                *State:<br>
+                <input type="text" id="stxt" name="stxt" ><br><br>
+                **As per feasibility.<br><br>*City/Town/District:
+                <input  type="text" id="dtxt" name="dtxt"><br><br>
+                Are you interested in the broadband for business service?<br>
+                <input type="radio" name="yes" value="yes" id="yes">Yes <input type="radio" id="no" name="no" value="no">No<br><br>
+                *Type of Business<br>
+                <textarea cols="55" rows="3" name="area" id="area" value="area"></textarea><br><br>
+                Are You intersted in becoming our partner<br>
+                <input type="radio" name="yes1" id="yes1" >Yes <input type="radio" name="no2" id="no2">No<br><br>
+                <input type="button" name="button" value="submit" class="btn-btn-sucess">
+        </form>   
+        <script text="text/javascript">
+            function seterror(id,error){
+                Element = document.getElementById(id);
+                Element.getElementByClassName('formerror')[0].innerHtML = error;
+
+
+            }
+            function validation(){
+                var returnvalue = true;
+                var ntxt = document.getElementById['myform']['ntxt'].value;
+                if(ntxt.length<5){
+                    seterror("ntxt","Length of name is too short");
+                    returnval = false;
+                }
+                return returnval;
+            }
+        </script>    
+                
+    </body>
+</html>
